@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure--1qv+-+!omj=95_3h5v&$%u5+63xsw88^29&u$)zotvc7h@7nc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ftpobi.pythonanywhere.com']
+ALLOWED_HOSTS = [
+    'ftpobi.pythonanywhere.com',
+    'localhost',
+    ]
 
 
 # Application definition
