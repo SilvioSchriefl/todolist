@@ -1,8 +1,14 @@
-from django.contrib.auth.models import User, Group
+
 from rest_framework import serializers
 from .models import Todo
 
-class TodoSerializer(serializers.HyperlinkedModelSerializer):
+
+
+
+class TodoSerializer(serializers.ModelSerializer):
+    
+    author = serializers.CharField(source='author.email', read_only=True)
     class Meta:
         model = Todo
-        fields = ['id', 'note', 'title', 'created_at']
+        fields = [ 'pk','note', 'title', 'created_at', 'author', 'time_passed', 'checked']
+
